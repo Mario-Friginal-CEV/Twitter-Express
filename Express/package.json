@@ -1,0 +1,69 @@
+{
+  "name": "minitwitter-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "nodemon": "^1.18.10",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "promise-mysql": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/register": "^7.4.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.16.1",
+    "@types/jest": "^24.0.6",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/node": "^11.9.4",
+    "@types/passport": "^1.0.0",
+    "@types/passport-jwt": "^3.0.1",
+    "babel-loader": "^8.0.5",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "scripts": {
+    "prestart": "rm -rf build & npm run build",
+    "start": "node build/server.js",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js",
+    "dev:watch": "ts-node src/server.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "webpack",
+    "check-types": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miluna/minitwitter-express.git"
+  },
+  "author": "Miguel Angel Luna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miluna/minitwitter-express/issues"
+  },
+  "homepage": "https://github.com/miluna/minitwitter-express#readme",
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
